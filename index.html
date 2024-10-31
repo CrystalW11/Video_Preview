@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Preview</title>
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 600px;
+            /* Adjust the max-width as desired */
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .hover-video {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+        <h1 style="text-align: center;"><em>Come Visit the beach for your next vacation!</em></h1>
+    <div class="video-container">
+        <video src="12487872_2160_3840_60fps.mp4" muted class="hover-video"></video>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.querySelector(".hover-video");
+
+            video.addEventListener("mouseover", function () {
+                video.play();
+            });
+
+            video.addEventListener("mouseout", function () {
+                video.pause();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
